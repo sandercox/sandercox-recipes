@@ -59,7 +59,7 @@ class VulkanSDKInstaller(Processor):
         command = [
             "sed",
             "-i", ".orig",
-            's/\\(^#!\/usr\/bin\/env python\\)$/\\13/',
+            's/\\(^#!\/usr\/bin\/env python\\)$/\\13/;'
             's/\\(shutil\\.copy("uninstall.sh", "\\)\\(.*)\\)/\\1..\/macos_root\\2/g',
             os.path.join(root_dir_sdk, "install_vulkan.py")
         ]
