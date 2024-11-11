@@ -19,11 +19,6 @@ class VulkanSDKInstaller(Processor):
             "required": False,
             "description": "Root directory of the SDK. Defaults to RECIPE_CACHE_DIR/NAME/installed",
         }
-
-        # "shared_processor_input_var": {
-        #     "required": True,
-        #     "description": "Test the use of an input variable in a shared processor.",
-        # }
     }
     output_variables = {
         "module_file_path": {"description": "Outputs this module's file path."}
@@ -64,6 +59,7 @@ class VulkanSDKInstaller(Processor):
         command = [
             "sed",
             "-i", ".orig",
+            's/\\(^#!\/usr\/bin\/env python\\)$/\\13/',
             's/\\(shutil\\.copy("uninstall.sh", "\\)\\(.*)\\)/\\1..\/macos_root\\2/g',
             os.path.join(root_dir_sdk, "install_vulkan.py")
         ]
