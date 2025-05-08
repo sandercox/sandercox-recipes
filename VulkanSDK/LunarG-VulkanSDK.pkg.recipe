@@ -32,7 +32,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/InstallVulkan-%VULKAN_VERSION%.app</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/vulkansdk-macOS-%VULKAN_VERSION%.app</string>
                 <key>strict_verification</key>
                 <false/>
                 <key>requirement</key>
@@ -60,7 +60,7 @@
             <key>Arguments</key>
             <dict>
                 <key>install_vulkan_app</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/InstallVulkan-%VULKAN_VERSION%.app</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/vulkansdk-macOS-%VULKAN_VERSION%.app</string>
             </dict>
         </dict>
         <dict>

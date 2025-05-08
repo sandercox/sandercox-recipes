@@ -32,7 +32,7 @@ class VulkanSDKInstaller(Processor):
         print("Running Vulkan SDK Installer:")
 
         command = [
-            os.path.join(install_vulkan_app, 'Contents', 'MacOS', 'InstallVulkan-' + self.env["VULKAN_VERSION"]),
+            os.path.join(install_vulkan_app, 'Contents', 'MacOS', 'vulkansdk-macOS-' + self.env["VULKAN_VERSION"]),
             "--root", root_dir_sdk,
             "--accept-messages",
             "--accept-licenses",
